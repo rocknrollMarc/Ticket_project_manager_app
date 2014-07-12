@@ -17,7 +17,7 @@ Ticketee::Application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   # Print deprecation notices to the Rails logger.
-
+  I18n.enforce_available_locales = false
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
 
