@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @projects = Project.new
+    @project = Project.new
   end
 
   def create
@@ -36,7 +36,6 @@ def update
 end
 
 def destroy
-  @project = Project.find(params[:id])
   @project.destroy
   flash[:notice] = "Project has been destroyed."
   redirect_to projects_path
