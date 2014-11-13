@@ -21,6 +21,9 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'guard-rspec'
   gem 'selenium-webdriver'
+  gem 'guard-bundler'
+  gem 'database_cleaner'
+  gem 'rubocop'
 end
 
 group :test do
