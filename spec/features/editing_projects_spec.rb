@@ -1,16 +1,14 @@
 require 'spec_helper'
-
-feature 'Editing Projects' do
-  scenario ' can update a Project' do
-    FactoryGirl.create(:project, name: "Test")
-
-    visit '/'
-    click_link 'Test'
+feature "Editing Projects" do
+  before do
+    FactoryGirl.create(:project, name: "TextMate 2")
+    visit "/"
+    click_link "TextMate 2"
     click_link "Edit Project"
-    fill_in 'Name', with: 'Test Beta'
-    click_button 'Update Project'
-
+end
+  scenario "Updating a project" do
+    fill_in "Name", with: "TextMate 2 beta"
+    click_button "Update Project"
     expect(page).to have_content("Project has been updated.")
-
   end
 end
